@@ -1,0 +1,20 @@
+<!-- In the template for the contact-form component, create a form with the following fields:
+Name (text input)
+Email (text input)
+Message (textarea)
+Submit button
+
+
+Bind the form fields to the model properties using the ngModel directive.
+-->
+
+<form>
+    <label>Name: <input type="text" [(ngModel)]="name" name= "name"></label>
+    <br>
+    <label>Email: <input type="text" [(ngModel)]="email" name="email" ></label>
+    <br>
+    <label>Message: <textarea [(ngModel)]="message" name="message"></textarea></label>
+    <br>
+    <button (click)="submit()">Submit</button>
+</form>
+  

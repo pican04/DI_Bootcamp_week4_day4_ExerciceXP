@@ -1,0 +1,19 @@
+<!-- In the component’s template, create a form element with a #f template reference variable.
+
+  *Within the form, add an input field for the user’s favorite color, with a ngModel directive and a favoriteColor attribute.
+
+*Add a button to the form that, when clicked, will submit the form.
+
+*In the submit() method, log the value of the favoriteColor form control to the console.
+
+*Also in the submit() method, set the value of a property called displayColor equal to the value of the favoriteColor form control.
+
+-->
+
+
+
+<form #f="ngForm" (ngSubmit)="submit()">
+    <input type="text" [(ngModel)]="favoriteColor"name="favoriteColor" placeholder="Enter your favorite color">
+    <button type="submit">Submit</button>
+  </form>
+  <div *ngIf="displayColor">Your favorite color is {{ displayColor }}</div>
